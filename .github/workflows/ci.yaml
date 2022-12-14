@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: put files to S3
-      uses: actions/checkout@master
-      uses: jakejarvis/s3-sync-action@master
+    - uses: actions/checkout@master
+    - uses: jakejarvis/s3-sync-action@master
       with:
         args: --exclude '.git*/*'
       env:

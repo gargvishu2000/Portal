@@ -9,21 +9,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: put files to S3
-      uses: actions/checkout@master
-      uses: jakejarvis/s3-sync-action@master
-      with:
-        args: --exclude '.git*/*'
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        SOURCE-DIR: 'docs'
-        DES-DIR: Documents/
+     - name: put files to S3
+       uses: actions/checkout@master
+       uses: jakejarvis/s3-sync-action@master
+       with:
+         args: --exclude '.git*/*'
+       env:
+         AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+         SOURCE-DIR: 'docs'
+         DES-DIR: Documents/
 
       # - uses: actions/checkout@v2
-      - name: Run script
-        run: |
-          chmod +x ./github/scripts/myscript.sh
-            ./github/scripts/myscript.sh
-        shell: bash
+       - name: Run script
+         run: |
+           chmod +x ./github/scripts/myscript.sh
+             ./github/scripts/myscript.sh
+         shell: bash

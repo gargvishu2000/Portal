@@ -11,6 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run script file
-      run: bash ./.github/scripts/myscript.sh
+      run: ./.github/scripts/myscript.sh
       shell: bash
 

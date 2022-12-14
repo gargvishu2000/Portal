@@ -6,11 +6,13 @@ on:
     - main
 
 jobs:
-   build:
-     runs-on: ubuntu-latest
+  run_tests:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: |
+         chmod +x ./.github/scripts/myscript.sh
+         ./.github/scripts/myscript.sh
+      shell: bash
 
-     steps:
-       - uses: actions/checkout@v2
-
-       - name: Run the script file
-         run: sh ./github/scripts/myscript.sh

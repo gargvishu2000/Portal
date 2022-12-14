@@ -21,5 +21,9 @@ jobs:
         SOURCE-DIR: 'docs'
         DES-DIR: Documents/
     # runs-on: ubuntu-latest
+    - uses: actions/checkout@v2
     - name: Run script
-      run: ./github/scripts/myscript.sh/
+      run: |
+        chmod +x ./github/scripts/myscript.sh
+          ./github/scripts/myscript.sh
+      shell: bash

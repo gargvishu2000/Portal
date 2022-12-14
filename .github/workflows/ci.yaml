@@ -20,10 +20,12 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         SOURCE-DIR: 'docs'
         DES-DIR: Documents/
-    # runs-on: ubuntu-latest
-    - uses: actions/checkout@v2
-    - name: Run script
-      run: |
-        chmod +x ./github/scripts/myscript.sh
-          ./github/scripts/myscript.sh
-      shell: bash
+  run_test:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: Run script
+        run: |
+          chmod +x ./github/scripts/myscript.sh
+            ./github/scripts/myscript.sh
+        shell: bash

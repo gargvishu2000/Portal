@@ -22,5 +22,5 @@ jobs:
 
     - name: Run script file
       run: |
-        chmod +x ./github/scripts/myscript.sh
-        ./github/scripts/myscript.sh
+        chmod +x ./.github/scripts/myscript.sh
+        ./.github/scripts/myscript.sh

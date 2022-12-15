@@ -20,7 +20,7 @@ jobs:
         SOURCE-DIR: 'docs'
         DEST-DIR: Documents/Portal
 
-        - name: Run script file
-          run: |
-             chmod +x ./github/scripts/myscript.sh
-             ./github/scripts/myscript.sh
+        # - name: Run script file
+        #   run: |
+        #      chmod +x ./github/scripts/myscript.sh
+        #      ./github/scripts/myscript.sh

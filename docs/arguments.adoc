@@ -1,6 +1,6 @@
 = Hello, AsciiDoc!
 
-This is an interactive editor.
+This is an interactive editor..
 Use it to try https://asciidoc.org[AsciiDoc].
 
 == Section Title
